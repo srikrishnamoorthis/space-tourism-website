@@ -5,7 +5,20 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+            'heading': ['Bellefair'],
+            'body': ['Barlow Condensed']
+        },
+        colors: {
+            'primary': '#0B0D17',
+            'secondary': '#D0D6F9',
+            'white': '#FFFFFF'
+        },
+        fontSize: {
+            '10xl': '10rem'
+        }
+    },
   },
   plugins: [],
 }
