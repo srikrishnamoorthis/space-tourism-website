@@ -26,28 +26,28 @@ function Header() {
                     <li className='px-16 pb-8 md:px-0 md:pb-0 md:h-full'>
                         <NavLink
                             to='/'
-                            className={({ isActive }) => classnames('no-underline md:h-full md:flex md:items-center md:hover:border-b hover:border-white', { 'md:border-b-2 md:border-white': isActive })}>
+                            className={({ isActive }) => classnames('no-underline md:h-full md:flex md:items-center md:hover:border-b-2 hover:border-tertiary', { 'md:border-b-2 md:border-white': isActive })}>
                             <><span className='pr-2 font-bold'>00</span>HOME</>
                         </NavLink>
                     </li>
                     <li className='px-16 pb-8 md:px-0 md:pb-0 md:h-full'>
                         <NavLink
                             to='/destination'
-                            className={({ isActive }) => classnames('no-underline md:h-full md:flex md:items-center md:hover:border-b hover:border-white', { 'md:border-b-2 md:border-white': isActive })}>
+                            className={({ isActive }) => classnames('no-underline md:h-full md:flex md:items-center md:hover:border-b-2 hover:border-tertiary', { 'md:border-b-2 md:border-white': isActive })}>
                             <><span className='pr-2 font-bold'>03</span>DESTINATION</>
                         </NavLink>
                     </li>
                     <li className='px-16 pb-8 md:px-0 md:pb-0 md:h-full'>
                         <NavLink
                             to='/crew'
-                            className={({ isActive }) => classnames('no-underline md:h-full md:flex md:items-center md:hover:border-b hover:border-white', { 'md:border-b-2 md:border-white': isActive })}>
+                            className={({ isActive }) => classnames('no-underline md:h-full md:flex md:items-center md:hover:border-b-2 hover:border-tertiary', { 'md:border-b-2 md:border-white': isActive })}>
                             <><span className='pr-2 font-bold'>03</span>CREW</>
                         </NavLink>
                     </li>
                     <li className='px-16 pb-8 md:px-0 md:pb-0 md:h-full'>
                         <NavLink
                             to='/technology'
-                            className={({ isActive }) => classnames('no-underline md:h-full md:flex md:items-center md:hover:border-b hover:border-white', { 'md:border-b-2 md:border-white': isActive })}>
+                            className={({ isActive }) => classnames('no-underline md:h-full md:flex md:items-center md:hover:border-b-2 hover:border-tertiary', { 'md:border-b-2 md:border-white': isActive })}>
                             <><span className='pr-2 font-bold'>03</span>TECHNOLOGY</>
                         </NavLink>
                     </li>

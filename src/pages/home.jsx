@@ -14,7 +14,7 @@ function Home() {
             </div>
             <div className='lg:justify-self-end flex justify-center items-center aspect-square bg-white text-primary rounded-full h-48 w-48 md:h-64 md:w-64 lg:h-64 lg:w-64 font-heading text-3xl relative uppercase cursor-pointer'>
                 Explore
-                <div className='absolute h-48 w-48 md:h-64 md:w-64 aspect-square hover:scale-[1.4] bg-[#979797] rounded-full transition-transform duration-300 ease-in opacity-0 hover:opacity-40'></div>
+                <div className='absolute h-48 w-48 md:h-64 md:w-64 aspect-square hover:scale-[1.4] bg-tertiary rounded-full transition-transform duration-300 ease-in opacity-0 hover:opacity-40'></div>
             </div>
         </div>
     );
