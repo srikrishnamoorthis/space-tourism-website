@@ -1,4 +1,4 @@
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/header';
 import Home from './pages/home';
 import Crew from './pages/crew';
@@ -8,10 +8,13 @@ import classnames from 'classnames';
 
 
 function App() {
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
     return (
         <div className={classnames('min-h-screen mx-auto min-w-[375px] md:pl-8 lg:max-w-[1440px] lg:pl-14 lg:pt-8 bg-primary \
-            isolate grid grid-rows-[min-content_1fr] lg:bg-[url(./assets/home/background-home-desktop.jpg)] \
-            md:bg-[url(./assets/home/background-home-tablet.jpg)] bg-[url(./assets/home/background-home-mobile.jpg)] bg-center bg-cover')}>
+            isolate grid grid-rows-[min-content_1fr]', {
+                'lg:bg-[url(./assets/home/background-home-desktop.jpg)] md:bg-[url(./assets/home/background-home-tablet.jpg)] bg-[url(./assets/home/background-home-mobile.jpg)] bg-center bg-cover': isHomePage
+            })}>
             <Header />
             <Routes>
                 <Route path='/' element={<Home />} />
