@@ -1,14 +1,26 @@
 import { useState } from 'react';
 import classnames from 'classnames';
+import moonImg from '../assets/destination/image-moon.webp';
+import marsImg from '../assets/destination/image-mars.webp';
+import europaImg from '../assets/destination/image-europa.webp';
+import titanImg from '../assets/destination/image-titan.webp';
+
+// Due to vite's inability to bundle images with appended base path
+// TODO: Find better way
+const images = {
+    Moon: moonImg,
+    Mars: marsImg,
+    Europa: europaImg,
+    Titan: titanImg
+}
 
 function Destination() {
     const [selectedTab, setSelectedTab] = useState(destinationTabTitles[0]);
-    const selectedTabImages = destinations.find(dest => dest.name === selectedTab)?.images;
     return (
         <div className='px-6 md:px-12 lg:pl-0 mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 text-white place-items-center'>
             <div>
                 <picture>
-                    <img src={selectedTabImages.webp} alt="" />
+                    <img src={images[selectedTab]} alt="" />
                 </picture>
             </div>
             <div className='text-center lg:text-left'>

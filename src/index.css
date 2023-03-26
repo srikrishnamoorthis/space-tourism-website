@@ -6,21 +6,21 @@
     font-family: 'Bellefair';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/Bellefair-Regular.ttf');
+    src: url('../public/fonts/Bellefair-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Barlow Condensed';
     font-weight: 400;
     font-style: normal;
-    src: url('./fonts/BarlowCondensed-Regular.ttf');
+    src: url('../public/fonts/BarlowCondensed-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Barlow Condensed';
     font-weight: 700;
     font-style: normal;
-    src: url('./fonts/BarlowCondensed-Bold.ttf');
+    src: url('../public/fonts/BarlowCondensed-Bold.ttf');
 }
 
 
@@ -28,5 +28,5 @@
     font-family: 'Barlow Regular';
     font-weight: 400;
     font-style: normal;
-    src: url('./fonts/Barlow-Regular.ttf');
+    src: url('../public/fonts/Barlow-Regular.ttf');
 }
