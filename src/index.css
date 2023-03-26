@@ -12,6 +12,21 @@
 @font-face {
     font-family: 'Barlow Condensed';
     font-weight: 400;
-    font-style: 400;
+    font-style: normal;
     src: url('./fonts/BarlowCondensed-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Barlow Condensed';
+    font-weight: 700;
+    font-style: normal;
+    src: url('./fonts/BarlowCondensed-Bold.ttf');
+}
+
+
+@font-face {
+    font-family: 'Barlow Regular';
+    font-weight: 400;
+    font-style: normal;
+    src: url('./fonts/Barlow-Regular.ttf');
 }
