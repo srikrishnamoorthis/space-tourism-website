@@ -17,43 +17,46 @@ const images = {
 function Destination() {
     const [selectedTab, setSelectedTab] = useState(destinationTabTitles[0]);
     return (
-        <div className='px-6 md:px-12 lg:pl-0 mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 text-white place-items-center'>
-            <div>
-                <picture>
-                    <img src={images[selectedTab]} alt="" />
-                </picture>
-            </div>
-            <div className='text-center lg:text-left'>
-                <ul className='font-body-cond tracking-[2.7px] flex gap-8 text-base justify-center lg:justify-start'>
-                    {destinationTabTitles.map(title => (
-                        <li
-                            key={title}
-                            onClick={() => setSelectedTab(title)}
-                            className={classnames('cursor-pointer py-2 hover:border-b-2 hover:border-tertiary uppercase text-secondary', {
-                                'border-b-2 border-white': title === selectedTab
-                            })}>{title}</li>
-                    ))}
-                </ul>
-                {destinations.map(({ name, description, distance, travel }) => (
-                    <div key={name}>
-                        {name === selectedTab &&
-                            <div className='mt-8'>
-                                <h2 className='font-heading text-8xl uppercase mb-8'>{name}</h2>
-                                <p className='font-body mb-16 text-secondary'>{description}</p>
-                                <div className='py-8 grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-0 border-t border-[#383B4B]'>
-                                    <div className=''>
-                                        <div className='uppercase font-body-cond tracking-[2.35px] text-sm mb-4 text-secondary'>Avg. distance</div>
-                                        <div className='uppercase font-heading text-3xl'>{distance}</div>
-                                    </div>
-                                    <div className=''>
-                                        <div className='uppercase font-body-cond tracking-[2.35px] text-sm mb-4 text-secondary'>Est. Travel Time</div>
-                                        <div className='uppercase font-heading text-3xl'>{travel}</div>
+        <div className='px-6 md:px-12 lg:pl-0 text-white grid gap-16 place-content-center'>
+            <div className='font-body-cond uppercase text-3xl text-center lg:text-left lg:pl-24 mt-12'><span className='font-bold opacity-30 pr-4'>01</span><span>Pick your destination</span></div>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
+                <div className='justify-self-center'>
+                    <picture>
+                        <img src={images[selectedTab]} alt="" />
+                    </picture>
+                </div>
+                <div className='text-center lg:text-left'>
+                    <ul className='font-body-cond tracking-[2.7px] flex gap-8 text-base justify-center lg:justify-start'>
+                        {destinationTabTitles.map(title => (
+                            <li
+                                key={title}
+                                onClick={() => setSelectedTab(title)}
+                                className={classnames('cursor-pointer py-2 hover:border-b-2 hover:border-tertiary uppercase text-secondary', {
+                                    'border-b-2 border-white': title === selectedTab
+                                })}>{title}</li>
+                        ))}
+                    </ul>
+                    {destinations.map(({ name, description, distance, travel }) => (
+                        <div key={name}>
+                            {name === selectedTab &&
+                                <div className='mt-8'>
+                                    <h2 className='font-heading text-8xl uppercase mb-8'>{name}</h2>
+                                    <p className='font-body mb-16 text-secondary'>{description}</p>
+                                    <div className='py-8 grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-0 border-t border-[#383B4B]'>
+                                        <div className=''>
+                                            <div className='uppercase font-body-cond tracking-[2.35px] text-sm mb-4 text-secondary'>Avg. distance</div>
+                                            <div className='uppercase font-heading text-3xl'>{distance}</div>
+                                        </div>
+                                        <div className=''>
+                                            <div className='uppercase font-body-cond tracking-[2.35px] text-sm mb-4 text-secondary'>Est. Travel Time</div>
+                                            <div className='uppercase font-heading text-3xl'>{travel}</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        }
-                    </div>
-                ))}
+                            }
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     )
