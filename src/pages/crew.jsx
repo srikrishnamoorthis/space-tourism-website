@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import classnames from 'classnames';
 import duglas from '../assets/crew/image-douglas-hurley.webp';
 import mark from '../assets/crew/image-mark-shuttleworth.webp';
 import victor from '../assets/crew/image-victor-glover.webp';
 import ansari from '../assets/crew/image-anousheh-ansari.webp';
+import { getNameKey } from '../common/utils';
 
 const images = {
     'douglas-hurley': duglas,
@@ -26,7 +27,7 @@ function Crew() {
                     <div key={nameKey} className={classnames('self-end lg:text-left text-center row-start-4 row-end-5 md:row-start-2 md:row-end-3 col-start-1 col-end-2', { 'hidden': !isActive })}>
                         <div className='uppercase font-heading lg:text-[32px] md:text-2xl text-base opacity-30 text-white pb-4'>{item.role}</div>
                         <div className='uppercase font-heading lg:text-6xl md:text-4xl text-2xl text-white pb-8 md:pb-12 '>{item.name}</div>
-                        <p className='font-body text-secondary leading-relaxed pb-8 lg:w-[70%] md:px-24 lg:px-0 text-base'>
+                        <p className='font-body text-secondary leading-relaxed pb-8 lg:w-[70%] md:px-24 lg:px-0 text-base md:text-lg'>
                             {item.bio}
                         </p>
                     </div>
@@ -86,7 +87,3 @@ const crew = [
 ]
 
 const crewNames = crew.map(item => getNameKey(item.name));
-
-function getNameKey(name = '') {
-    return name.toLowerCase().split(' ').join('-');
-}
