@@ -11,12 +11,14 @@ function App() {
     const location = useLocation();
     const isHomePage = location.pathname.includes('/home');
     const isDestinationPage = location.pathname.includes('/destination');
+    const isCrewPage = location.pathname.includes('/crew');
 
     return (
         <div className={classnames('min-h-screen mx-auto min-w-[375px] md:pl-8 lg:max-w-[1440px] lg:pl-14 lg:pt-8 bg-primary \
             isolate grid grid-rows-[min-content_1fr]', {
             'lg:bg-[url(./assets/home/background-home-desktop.jpg)] md:bg-[url(./assets/home/background-home-tablet.jpg)] bg-[url(./assets/home/background-home-mobile.jpg)] bg-center bg-cover': isHomePage,
-            'lg:bg-[url(./assets/destination/background-destination-desktop.jpg)] md:bg-[url(./assets/destination/background-destination-tablet.jpg)] bg-[url(./assets/destination/background-destination-mobile.jpg)] bg-center bg-cover': isDestinationPage
+            'lg:bg-[url(./assets/destination/background-destination-desktop.jpg)] md:bg-[url(./assets/destination/background-destination-tablet.jpg)] bg-[url(./assets/destination/background-destination-mobile.jpg)] bg-center bg-cover': isDestinationPage,
+            'lg:bg-[url(./assets/crew/background-crew-desktop.jpg)] md:bg-[url(./assets/crew/background-crew-tablet.jpg)] bg-[url(./assets/crew/background-crew-mobile.jpg)] bg-center bg-cover': isCrewPage
         })}>
             <Header />
             <Routes>

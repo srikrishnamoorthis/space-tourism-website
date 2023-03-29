@@ -37,14 +37,14 @@ function Header() {
                         <NavLink
                             to='/space-tourism-website/destination'
                             className={({ isActive }) => classnames('no-underline md:h-full md:flex md:items-center md:hover:border-b-2 hover:border-tertiary', { 'md:border-b-2 md:border-white': isActive })}>
-                            <><span className='pr-2 font-bold'>03</span>DESTINATION</>
+                            <><span className='pr-2 font-bold'>01</span>DESTINATION</>
                         </NavLink>
                     </li>
                     <li className='px-16 pb-8 md:px-0 md:pb-0 md:h-full'>
                         <NavLink
                             to='/space-tourism-website/crew'
                             className={({ isActive }) => classnames('no-underline md:h-full md:flex md:items-center md:hover:border-b-2 hover:border-tertiary', { 'md:border-b-2 md:border-white': isActive })}>
-                            <><span className='pr-2 font-bold'>03</span>CREW</>
+                            <><span className='pr-2 font-bold'>02</span>CREW</>
                         </NavLink>
                     </li>
                     <li className='px-16 pb-8 md:px-0 md:pb-0 md:h-full'>
